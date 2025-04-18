@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=New+Rocker&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <style>
+        /* RESET CSS - Membersihkan gaya bawaan browser */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+            list-style: none;
+            text-decoration: none;
+            border: none;
+            outline: none;
+            background: none;
+            color: inherit;
+        }
+
+        /* Mengatur warna dasar dengan gradasi biru gelap ke ungu dominan biru */
+        body {
+            background: linear-gradient(to bottom, #00008b, #800080); /* Gradasi biru gelap ke ungu dominan biru */
+            text-align: center;
+            padding: 15px;
+            overflow: hidden;
+            position: relative;
+            height: 100vh;
+            animation: gradientAnimation 10s ease infinite;
+        }
+
+        /* Animasi untuk gradasi bergerak */
+        @keyframes gradientAnimation {
+            0% {
+                background: linear-gradient(to bottom, #00008b, #800080);
+            }
+            50% {
+                background: linear-gradient(to bottom, #000080, #4b0082);
+            }
+            100% {
+                background: linear-gradient(to bottom, #00008b, #800080);
+            }
+        }
+        
+        @keyframes slideIn {
+    0% {
+        transform: translateX(50px); /* Mulai dari kanan */
+        opacity: 0; /* Transparan */
+    }
+    100% {
+        transform: translateX(0); /* Kembali ke posisi normal */
+        opacity: 1; /* Tampak sepenuhnya */
+    }
+}
+       @keyframes slideIn0 {
+    0% {
+        transform: translateX(-50px); /* Mulai dari kanan */
+        opacity: 0; /* Transparan */
+    }
+    100% {
+        transform: translateX(0); /* Kembali ke posisi normal */
+        opacity: 1; /* Tampak sepenuhnya */
+    }
+}
+
+        /* Header */
+        header {
+            background: linear-gradient(to bottom, #74C0E1, #747DE1);
+            color: #ffffff;
+            padding: 20px;
+            border-bottom: 5px solid #ffffff;
+        }
+
+        /* Navigasi */
+        nav ul {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 10px;
+        }
+
+        nav ul li a {
+            color: white;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            text-decoration: bold;
+            transition: color 1.4s ease;
+        }
+
+        /* Contoh Box */
+        .box {
+            width: 300px;
+            margin: 20px auto;
+            padding: 15px;
+            border: 2px solid #ffffff;
+            border-radius: 18px;
+            background: linear-gradient(to bottom, #747DE1, #74C0E1);
+            text-align: center;
+            box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Tombol */
+        .btn {
+        	font-family: 'Ubuntu', sans-serif;
+            display: inline-block;
+            padding: 10px 20px;
+            background: white;
+            color: #5C2EAA;
+            border-radius: 17px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+    opacity: 0; /* Awalnya transparan */
+    animation: slideIn 1s ease-out forwards; /* Animasi berjalan saat halaman dimuat */
+            margin: 10px;
+        }
+        .btn0 {
+        	font-family: 'Ubuntu', sans-serif;
+            display: inline-block;
+            padding: 10px 20px;
+            background: white;
+            color: #5C2EAA;
+            border-radius: 17px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+    opacity: 0; /* Awalnya transparan */
+    animation: slideIn0 1s ease-out forwards; /* Animasi berjalan saat halaman dimuat */
+            margin: 10px;
+        }
+
+        .btns {
+            font-family: 'Ubuntu', sans-serif;
+            font-size: 12px;
+            font-weight: bold;
+            display: inline-block;
+            padding: 10px 20px;
+            background: #ffffff;
+            color: #000000;
+            border-radius: 100px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+    opacity: 0; /* Awalnya transparan */
+    animation: slideIn0 1s ease-out forwards; /* Animasi berjalan saat halaman dimuat */
+        }
+
+        .bttn {
+            font-family: 'New Rocker', sans-serif;
+        }
+
+        .btn:hover {
+            background: #0056b3;
+        }
+
+        /* Gambar */
+        img {
+            display: block;
+            margin: 50px auto;
+            border: 5px solid #ffffff;
+            border-radius: 1000px;
+            width: 270px;
+            height: auto;
+        }
+
+        /* Partikel kecil yang bergerak */
+        .particle {
+            position: absolute;
+            border-radius: 50%;
+            background-color: white;
+            animation: particleMovement 5s infinite;
+        }
+
+        @keyframes particleMovement {
+            0% {
+                opacity: 1;
+                transform: translateY(0) scale(0.5);
+            }
+            100% {
+                opacity: 0;
+                transform: translateY(-100vh) scale(0.8);
+            }
+        }
+    </style>
+    <title>Eriza-Belajar-Website</title>
+</head>
+<body>
+
+    <!-- Partikel bergerak -->
+    <div class="particle" style="width: 10px; height: 10px; top: 20%; left: 30%; animation-duration: 6s;"></div>
+    <div class="particle" style="width: 12px; height: 12px; top: 40%; left: 60%; animation-duration: 8s;"></div>
+    <div class="particle" style="width: 8px; height: 8px; top: 70%; left: 50%; animation-duration: 7s;"></div>
+    <div class="particle" style="width: 9px; height: 9px; top: 50%; left: 20%; animation-duration: 5s;"></div>
+
+    <header>
+        <h1 class="bttn">SELAMAT DATANG</h1>
+        <p>jangan hina ye anjg, gw lagi belajar bikin web 🗿</p>
+        <img id="headerImage" src="https://img12.pixhost.to/images/1275/581524563_imgtmp.jpg" alt="Gambar Placeholder">
+        <button class="btns" id="toggleAudio">Music Play</button>
+
+        <audio id="audioPlayer">
+            <source src="https://sf16-ies-music-va.tiktokcdn.com/obj/musically-maliva-obj/7306703616638388997.mp3" type="audio/mp3">
+            Your browser does not support the audio element.
+        </audio>
+
+        <script>
+    const toggleButton = document.getElementById('toggleAudio');
+    const audioPlayer = document.getElementById('audioPlayer');
+    const headerImage = document.getElementById('headerImage');
+
+    // URL gambar saat lagu diputar dan dihentikan
+    const imagePlay = "https://img12.pixhost.to/images/1275/581524994_imgtmp.jpg"; // Gambar saat lagu diputar
+    const imagePause = "https://img12.pixhost.to/images/1275/581524563_imgtmp.jpg"; // Gambar awal
+
+    toggleButton.addEventListener('click', function () {
+        if (audioPlayer.paused) {
+            audioPlayer.play();
+            toggleButton.textContent = '🔴'; // Ubah teks tombol
+            headerImage.src = imagePlay; // Ubah gambar
+        } else {
+            audioPlayer.pause();
+            toggleButton.textContent = 'Music Play'; // Kembalikan teks tombol
+            headerImage.src = imagePause; // Kembalikan gambar
+        }
+    });
+</script>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="https://google.com">Home</a></li>
+            <li><a href="https://relawannusantara.org/campaign?source=GK&gad_source=1&gclid=Cj0KCQjwkZm_BhDrARIsAAEbX1EvmnlDfA0sUh77pMmElI_PwJZ9ufcYj7YLflZD9cHqiuZyRHygCeQaAiP3EALw_wcB">Donate</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <a href="https://chat.whatsapp.com/IZ4dN1Oa5fsLL50qYGcfYD" target="_blank">
+            <button class="btn0">Group</button>
+         </a>
+         <a href="https://whatsapp.com/channel/0029VacUGcxDJ6GuiseBDW0h" target="_blank">
+            <button class="btn">Channel</button>
+        </a>
+        <section class="box">
+            <h2>Bantu ajarin dong banh 🐦</h2>
+            <p>rawrrrr, slebewww</p>
+            <a href="https://wa.me/6285659202292" target="_blank">
+                <button class="btn">My Contact</button>
+            </a>
+        </section>
+    </main>
+
+</body>
+</html>
